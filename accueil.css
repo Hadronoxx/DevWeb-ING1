@@ -96,3 +96,12 @@
 .haut ul li{
   cursor: pointer;
 }
+
+#sujet{
+  width: 50%;
+}
+
+#texte{
+  width: 50%;
+  height: 10ch;
+}
