@@ -31,7 +31,7 @@
          <a onclick="accueil()">Accueil</a> <hr>
          <h2 style="text-decoration: underline">Nos produits</h2>
          <a onclick="skittle()">skittles</a> <br> <br>
-         <a onclick="mms()"">M&M's</a> <br> <br>
+         <a onclick="mms()">M&M's</a> <br> <br>
          <a onclick="haribo()">Haribo</a> <br> <br>
 
 <br>
@@ -44,31 +44,150 @@
          </div>
          <div id="skittle" style="display:none" >
            <h1>texte skittle</h1>
+
+    <table class="Tableau">
+    <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Référence</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th class="stock">Stock</th>
+        <th>Commande</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="src/skitllestab.png" alt=""></td>
+        <td>ref1</td>
+        <td>Des bonbons tendres dragéifiés aux fruits aux couleurs de l'arc-en ciel. Une variété de parfums : fraise, citron, pomme, raisin ou framboise.</td>
+        <td>2.99€</td>
+        <td class="stock">50</td>
+        <td>
+          <input type="button" value="-" id="skittle1-" onclick="enlever1('skittle1-')">
+          <input type="number" style="width: 40%;" id="numero" value=0>
+          <input type="button" value="+" id="skittle1+" onclick="ajouter1('skittle1+')">
+          <input type="button" value="Valider Panier" onclick="verifierpanier(this)">
+
+
+        </td>
+
+      </tr>
+      <tr>
+        <td><img src="src/skittleviolets.png"></td>
+        <td>ref2</td>
+        <td>Dragées multicolores à la framboise, à la fraise, à la mûre, à la cerise sauvage et melon-mûre.</td>
+        <td>3.25€</td>
+        <td class="stock">40</td>
+        <td>
+          <input type="button" value="-" id="skittle2-" onclick="enlever1('skittle2-')">
+          <input type="number" style="width: 40%;" id="numero" value=0>
+          <input type="button" value="+" id="skittle2+" onclick="ajouter1('skittle2+')">
+          <input type="button" value="Valider Panier" onclick="verifierpanier(this)">        
+        </td>
+          
+
+
+      </tr>
+      <tr>
+        <td><img src="src/skittlebleu.png" id="Skittlebleu" onmouseout="reduireimage(this)" onmouseover="agrandirimage(this)"></td>
+        <td>ref3</td>
+        <td>Skittles au goût fruits tropicaux. Chaque skittle est bi-goût: Banane/Baies, kiwi/Citron, Mangues/Agrumes, Ananas/Fruits de la passion, Fraise/Carambole, une valeur sure qui ne vous décevra pas </td>
+        <td>3.99€</td>
+        <td class="stock">20</td>
+        <td>
+          <input type="button" value="-" id="skittle3-" onclick="enlever1('skittle3-')">
+          <input type="number" style="width: 40%;" id="numero" value=0>
+          <input type="button" value="+" id="skittle3+" onclick="ajouter1('skittle3+')">
+          <input type="button" value="Valider Panier" onclick="verifierpanier(this)">
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  <input id="BoutonStock"
+       type="button"
+       value="Cacher Stock" onclick="cacherStock()">
+  
+  
          </div>
          <div id="mms" style="display:none" >
            <h1>texte mms</h1>
+           <table class="Tableau">
+            <thead>
+              <tr>
+                <th>Photo</th>
+                <th>Référence</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th class="stock">Stock</th>
+                <th>Commande</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><img src="src/skitllestab.png" alt=""></td>
+                <td>ref1</td>
+                <td>D'irrésistibles billes de chocolat pleines de couleurs aussi fun à manger qu'à partager. L'alliance unique entre une cacahuète croquante et un délicieux chocolat au lait.</td>
+                <td>2.99€</td>
+                <td class="stock">50</td>
+                <td>
+                  <input type="button" value="-" id="mms1-" onclick="enlever1('mms1-')">
+                  <input type="number" style="width: 40%;" id="numero" value=0> 
+                  <input type="button" value="+" id="mms1+" onclick="ajouter1('mms1+')">
+                </td>
+        
+              </tr>
+              <tr>
+                <td><img src="src/skittleviolets.png" alt=""></td>
+                <td>ref2</td>
+                <td>D'irrésistibles billes de chocolat pleines de couleurs aussi fun à manger qu'à partager. Un cœur de riz soufflé croustillant enrobé de chocolat au lait pour une explosion de saveurs.</td>
+                <td>2.50€</td>
+                <td class="stock">30</td>
+                <td><input type="button" value="-" id="mms2-" onclick="enlever1('mms2-')">
+                  <input type="number" style="width: 40%;" id="numero" value=0>
+                  <input type="button" value="+" id="mms2+" onclick="ajouter1('mms2+')">
+                </td>
+        
+              </tr>
+              <tr>
+                <td><img src="src/skittlebleu.png" alt=""></td>
+                <td>ref3</td>
+                <td>Une idée simple, mais terriblement efficace : remplacer la cacahuète par du Beurre de Cacahuètes ! Chocolat croquant et Peanut Butter fondant, c'est parfait, culte, inédit en France ! </td>
+                <td>3.99€</td>
+                <td class="stock">60</td>
+                <td><input type="button" value="-" id="mms3-" onclick="enlever1('mms3-')">
+                  <input type="number" style="width: 40%;" id="numero" value=0>
+                  <input type="button" value="+" id="mms3+" onclick="ajouter1('mms3+')">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <input id="BoutonStock"
+               type="button"
+               value="Cacher Stock" onclick="cacherStock()">
+          
          </div>
          <div id="haribo" style="display:none" >
            <h1>texte Haribo</h1>
          </div>
          <div id="Contact" style="display:none">
            <h1 style="text-align:center">Demande de Contact</h1>
-           <form action="remerciement.html">
+           <form>
              <label>Nom</label>
-             <input type="text" placeholder="Entrez votre nom"> <br><br>
+             <input type="text" id="nom" placeholder="Entrez votre nom"> <br><br>
 
              <label>Prénom</label>
-             <input type="text" placeholder="Entrez votre prénom"> <br><br>
+             <input type="text" id="prenom" placeholder="Entrez votre prénom"> <br><br>
 
              <label>Email</label>
-             <input type="text" placeholder="email@gmail.com"> <br><br>
+             <input type="text" id="email" placeholder="email@gmail.com"> <br><br>
 
              <p style="display:inline">Genre:</p>
              <label>Homme</label>
-             <input type="radio" name="genre" value="Homme">
+             <input type="radio" name="genre" id="homme" value="Homme">
 
              <label>Femme</label>
-             <input type="radio" name="genre" value="Femme"><br><br>
+             <input type="radio" name="genre" id="femme" value="Femme"><br><br>
 
              <label>Date de Naissance</label>
              <input type="date"> <br><br>
@@ -86,7 +205,9 @@
              <label>Texte</label> <!-- TODO: Ameliorer cet input -->
              <input type="text" id="texte"> <br> <br>
 
-             <input type="submit">
+             <input onclick="envoiMessage()" type="submit" >
+
+             <p>Veuillez utiliser Firefox pour que l'envoi du message puisse se faire correctement </p>
 
 
            </form>

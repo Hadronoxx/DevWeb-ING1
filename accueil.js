@@ -46,3 +46,98 @@ function Contact(){
   elt.style.display="block";
 
 }
+
+
+
+function cacherStock(){
+
+  var elt=document.getElementsByClassName("stock");
+  var elt2=document.getElementById("BoutonStock");
+
+  if (elt2.value=="Cacher Stock"){
+    console.log(elt.length);
+    var taille=elt.length;
+    for (var i = 0; i < taille; i++) {
+      console.log(elt[i]);
+      elt[i].style.display="none";    
+  }
+  
+  elt2.value="Afficher Stock";
+
+  }else{
+    if (elt2.value=="Afficher Stock"){
+      console.log(elt.length);
+    var taille=elt.length;
+    for (var i = 0; i < taille; i++) {
+      console.log(elt[i]);
+      elt[i].style.display="table-cell";    
+  }
+  
+  elt2.value="Cacher Stock";
+
+    }else{
+      console.log("Erreur");
+    }
+  }
+}
+
+
+function initStock(){
+  var elt=document.getElementsByClassName("stock");
+    elt[1].innerHTML= 50;
+    elt[2].innerHTML=40;
+    elt[3].innerHTML=31;   
+  }
+
+
+
+function ajouter1(borne){
+  elt=document.getElementById(borne).previousElementSibling;
+  console.log(elt);
+  var valeur=parseInt(elt.value,10);
+  if(valeur<document.getElementById(borne).parentNode.previousElementSibling.innerHTML){
+    valeur+=1;
+    elt.value=valeur;
+  }
+  
+}
+
+function enlever1(borne){
+  elt=document.getElementById(borne).nextElementSibling;
+  var valeur=parseInt(elt.value,10);
+  if (valeur>0){
+    valeur-=1;
+    elt.value=valeur;
+  } 
+ 
+}
+
+function agrandirimage(obj){
+  obj.style.height='50%';
+  obj.style.width='auto';
+}
+
+function reduireimage(obj){
+  obj.style.height='20ch';
+  obj.style.width='auto';
+}
+
+
+function verifierpanier(obj){
+  var valeur=parseInt(obj.previousElementSibling.previousElementSibling.value,10);
+  var stockMaxi=parseInt(obj.parentNode.previousElementSibling.innerHTML,10);
+  console.log(obj.previousElementSibling.previousElementSibling);
+  console.log("StockMaxi="+stockMaxi+"    Valeur="+valeur);
+  if (valeur<0 || valeur> stockMaxi){
+    alert("Erreur, vous devez saisir une valeur comprise entre 0 et "+stockMaxi);
+  }else{
+    var res=stockMaxi-valeur;  
+    obj.parentNode.previousElementSibling.innerHTML=res;
+  }
+  
+
+}
+
+function envoiMessage(){
+  window.location.href="mailto:adresse@email.com"+encodeURIComponent("test")+encodeURIComponent("Message");
+}

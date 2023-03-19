@@ -3,7 +3,7 @@
   width:99.7%;
    height: 25%;
    margin: 0px, 0px, 0px, 30%;
-   background-color: #97E2FE;
+   background-color: none;
    float: right;
    position: absolute;
    top:0;
@@ -32,7 +32,7 @@
   position: fixed;
   width:100%;
    height: 4em;
-   background-color: #d5e8d4;
+   background-color: none;
    bottom: 0;
    left: 0;
 }
@@ -44,8 +44,7 @@
 }
 
 .menu a{
-  color: green;
-  text-decoration: none;
+    text-decoration: none;
 }
 .menu li{
   border: solid;
@@ -62,21 +61,22 @@
 .gauche{
   position: absolute;
   left: 0;
-  top: 25%;
+  top: 25.3%;
   float:  left;
-  background-color: yellow;
+  background-color: none;
   width: 20%;
   height: 75%;
+  border: solid;
 }
 
 .droite{
   position: absolute;
   float: right;
-  left: 20%;
+  left: 21%;
   top: 25%;
   width: 80%;
   height: 75%;
-  background-color: pink;
+  background-color: none;
 
 }
 
@@ -90,7 +90,7 @@
 }
 
 .haut ul li a{
-  color: green;
+    color: black;
 }
 
 .haut ul li{
@@ -105,3 +105,36 @@
   width: 50%;
   height: 10ch;
 }
+
+body{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+
+table.Tableau {
+  width: 97%;
+  background-color: none;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  color: #000000;
+}
+
+table.Tableau td, table.Tableau th {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.Tableau thead {
+  background-color: none;
+}
+
+td img{
+  width: 20ch;
+}
+
