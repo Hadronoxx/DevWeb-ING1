@@ -157,8 +157,10 @@ var selection = selectElement.options[selectElement.selectedIndex].textContent;
   +"\nPrénom: "+document.getElementById("prenom").value+
   "\nEmail: "+document.getElementById("email").value +
   "\nSexe: "+sexe+
-  "\nDate de naissance"+document.getElementById("datenaissance").value;
-  "\nMétier: "+selection;
+  "\nDate de naissance"+document.getElementById("datenaissance").value+
+  "\nMétier: "+selection+
+  "\n\n\n\n\n\n"+document.getElementById("texte").value;
+
 
 
   var sujet=document.getElementById("sujet").value;
@@ -167,5 +169,4 @@ var selection = selectElement.options[selectElement.selectedIndex].textContent;
   window.location.href="mailto:"+email+"?subject="+sujet+"&body="+message;
 
 
- /*mailto:adresse-email@domaine.com?subject=Sujet de l'email&body=Corps de l'email&cc=adresse-email2@domaine.com"*/
 }
