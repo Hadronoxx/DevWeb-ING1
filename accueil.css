@@ -79,19 +79,20 @@
   float: right;
   left: 21%;
   top: 25%;
-  width: 80%;
+  width: 79%;
   height: 75%;
   background-color: none;
 
 }
 
 .gauche a{
-  color: blue;
+  color: black;
   text-decoration:underline;
 }
 
 .gauche a:hover{
   cursor: pointer;
+  color: rgb(51, 51, 194);
 }
 
 .haut ul li a{
