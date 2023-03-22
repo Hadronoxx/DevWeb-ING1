@@ -126,6 +126,7 @@ function reduireimage(obj){
 function verifierpanier(obj){
   var valeur=parseInt(obj.previousElementSibling.previousElementSibling.value,10);
   var stockMaxi=parseInt(obj.parentNode.previousElementSibling.innerHTML,10);
+  var qteCommandee= parseInt(obj.parentNode.nextElementSibling.innerHTML,10);
   console.log(obj.previousElementSibling.previousElementSibling);
   console.log("StockMaxi="+stockMaxi+"    Valeur="+valeur);
   if (valeur<0 || valeur> stockMaxi){
@@ -133,7 +134,10 @@ function verifierpanier(obj){
   }else{
     var res=stockMaxi-valeur;  
     obj.parentNode.previousElementSibling.innerHTML=res;
+    obj.parentNode.nextElementSibling.innerHTML=qteCommandee+valeur
   }
+
+  
   
 
 }
