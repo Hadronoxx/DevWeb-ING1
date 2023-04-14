@@ -1,0 +1,183 @@
+.haut{
+
+  width:99.7%;
+   height: 25%;
+   margin: 0px, 0px, 0px, 30%;
+   background-color: none;
+   float: right;
+   position: absolute;
+   top:0;
+   left: 0;
+   border: solid;
+   z-index: 1;
+}
+.imagebonbon{
+  position: absolute;
+  top: 5%;
+  left: 1%;
+  width: 20%;
+  z-index: 10;
+}
+
+
+#Titre{
+  text-align: center;
+}
+#skittles{
+  width: 80%;
+}
+.bas{
+  position: fixed;
+  width:100%;
+
+   height: 2em;
+   background-color: none;
+   bottom: 0;
+   left: 0;
+}
+.bas p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+}
+.menu{
+  display: inline-flex;
+  padding-left: 25%;
+  list-style-type: none;
+}
+
+.menu a{
+    text-decoration: none;
+}
+.menu li{
+  border: solid;
+  border-radius: 50px;
+  border-style: inset;
+  float: left;
+  width: 10em;
+  text-align: center;
+}
+
+
+
+
+.gauche{
+  position: absolute;
+  left: 0;
+  top: 25.3%;
+  float:  left;
+  background-color: none;
+  width: 20%;
+  height: 75%;
+  border: solid;
+}
+
+.droite{
+  position: absolute;
+  float: right;
+  left: 21%;
+  top: 25%;
+  width: 79%;
+  height: 75%;
+  background-color: none;
+
+}
+
+.gauche a{
+  color: black;
+  text-decoration:underline;
+}
+
+.gauche a:hover{
+  cursor: pointer;
+  color: rgb(51, 51, 194);
+}
+
+.haut ul li a{
+    color: black;
+}
+
+.haut ul li{
+  cursor: pointer;
+}
+
+#sujet{
+  width: 50%;
+}
+
+#texte{
+  width: 50%;
+  height: 10ch;
+}
+
+body{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+
+table.Tableau {
+  width: 97%;
+  background-color: none;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  color: #000000;
+}
+
+table.Tableau td, table.Tableau th {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 3px;
+}
+
+table.Tableau thead {
+  background-color: none;
+}
+
+td img{
+  width: 20ch;
+}
+
+.stock{
+  display: none;
+
+}
+
+#accueil img{
+  position: absolute;
+  left: 25%;
+}
+
+.erreur{
+  border-color: red;
+}
+  
+.btnConnexion{
+  position: absolute;
+  left: 90%;
+  top: 4%;
+  border: solid;
+  border-radius: 70px;
+  padding: 1em;
+  }
+
+ .btnConnexion a{
+  color: #000000;
+  
+ } 
+
+#panier{
+  position: absolute;
+  top: 35%;
+  padding : 0.5%;
+  width:3%;
+  left: 92.5%;
+  border: solid;
+border-radius: 50% 20% / 10% 40%;  
+}
+
+
