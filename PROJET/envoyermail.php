@@ -18,36 +18,52 @@ function toutVerifier(array $tab){
     }
 
 
-    if(empty($tab["email"])){
+    if(empty($tab["email"])|| !filter_var($tab["email"], FILTER_VALIDATE_EMAIL)){
         $_SESSION["emailClasse"]="erreur";
     }else{
         $_SESSION["emailClasse"]="'".$tab["email"]."'";;
     }
-    /* TODO ca ne marche pas aled*/
-    $aujourdhui= date('m-d-Y');
-    $date = DateTime::createFromFormat('m-d-Y', $tab["date de naissance"]);
-    if($aujourdhui>$date){
-        $_SESSION["dateClasse"]="oki";
+    $aujourdhui= date('Y-m-d');  
+    echo $tab["datenaissance"];
+    if($aujourdhui>=$tab["datenaissance"]&& $tab["datenaissance"]!=null){
+        echo "date Correcte";
+        $_SESSION["dateClasse"]="'".$tab["datenaissance"]."'";
     }else{
-        $_SESSION["dateClasse"]="pas oki";
+        echo "date incorrecte";
+        $_SESSION["dateClasse"]="erreur";
     }
 
 
     if(empty($tab["sujet"])){
         $_SESSION["sujetClasse"]="erreur";
     }else{
-        $_SESSION["sujetClasse"]="'".$tab["sujet"]."'";;
+        $_SESSION["sujetClasse"]="'".$tab["sujet"]."'";
     }
+
     if(empty($tab["texte"])){
         $_SESSION["texteClasse"]="erreur";
     }else{
-        $_SESSION["texteClasse"]="'".$tab["texte"]."'";;
+        $_SESSION["texteClasse"]="'".$tab["texte"]."'";
     }
-
-    print_r($_SESSION);
+    
+    
+    
 
 }
 toutVerifier($_POST);
+
+/*
+$to = "diegojedachercoles@gmail.com";
+$subject = "test";
+$message = "test";
+
+$headers = "From: diegojedachercoles@gmail.com\r\n";
+$headers .= "Content-Type: text/html\r\n";
+
+print_r(mail($to, $subject, $message, $headers));*/
+
+//print_r($_SESSION);
+
 /*
  if(!toutRempli($_POST)){
     print_r("Erreur dans le formulaire");
@@ -59,6 +75,8 @@ toutVerifier($_POST);
     $_SESSION["erreurFormulaire"]=false;
 
  }*/
+ 
+ 
  header("Location:contact.php");
 
 ?>

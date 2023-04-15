@@ -11,11 +11,21 @@
          </ul>
          <img src="src/panier.png" id="panier" onclick="panier()" onmouseover="console.log('bjr')">
         <div class="btnConnexion">
-          <a href="">S'inscrire</a>
-         <a href="connexion.php">Se connecter</a></div>
-        
-         
-        
+          <?php
+          /*echo "Valeur de la session:";
+          print_r($_SESSION);*/
+          if($_SESSION["user"]==null){          
+          ?>
+          <a href="inscription.php">S'inscrire</a>
+         <a href="connexion.php">Se connecter</a>
+        <?php
+          }else{
+            ?>
+            <a href="deconnexion.php">Se deconnecter</p>
+            <?php
+          }
+        ?>
+        </div>
        </div>
 
        <div class="imagebonbon">
@@ -31,7 +41,6 @@
          <a onclick="mms()">M&M's</a> <br> <br>
          <a onclick="haribo()">Haribo</a>
          
-
 <br>
 
        </div>

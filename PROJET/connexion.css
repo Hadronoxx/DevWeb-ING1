@@ -12,3 +12,10 @@ input{
     margin-top: 0.3em;
     margin-bottom: 0.3em;
 }
+
+
+#Inscription{
+    position: absolute;
+    left: 40%;
+    top:15%;
+  }

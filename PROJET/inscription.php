@@ -13,24 +13,26 @@ session_start();
        <script type="text/javascript" src="accueil.js">
 
        </script>
-       <h1 >Creez votre compte!</h1>
+       <div id="Inscription">
+        <h1 >Creez votre compte!</h1>
 
 
-       <form action="realiser_inscription.php" method="POST">
-        <label >Identifiant</label>
-        <input name="user" type="text">
-        <label>Mot de Passe</label>
-        <input name="password" type="password"><br><br>
-        <input type="submit"> 
-       </form>
-       <?php 
-       if($_SESSION[utilisateurUnique]==true){
-        echo "Vous avez bien été enregistré, vous pouvez maintenant vous connecter";
+        <form action="realiser_inscription.php" method="POST">
+            <label >Identifiant</label>
+            <input name="user" type="text" required>
+            <label>Mot de Passe</label>
+            <input name="password" type="password" required><br><br>
+            <input type="submit"> 
+        </form>
 
-       }else{
-        echo "Cet identifiant est déjà utilisé par une autre personne";
-        $_SESSION[utilisateurUnique]=true;
-       }
-       ?>
+        <a href="accueil.php">Retour à la page d'accueil</a>
+        <?php 
+        if($_SESSION[utilisateurUnique]==true){
+        }else{
+            echo "Cet identifiant est déjà utilisé par une autre personne";
+            $_SESSION[utilisateurUnique]=true;
+        }
+        ?>
+       </div>
     </body>
 </html>

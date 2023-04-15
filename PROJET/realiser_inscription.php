@@ -29,11 +29,17 @@ if(!$existe_deja){
     $json_content = json_encode($data, JSON_PRETTY_PRINT);
     file_put_contents('identifiants.json', $json_content);
     $_SESSION[utilisateurUnique]=true;
+    $_SESSION["user"]=$_POST['user'];
+    $_SESSION["password"]=$_POST['password'];
+    header("Location:accueil.php");
+
+
 
 }else{
     $_SESSION[utilisateurUnique]=false;
+    header("Location:inscription.php");
+
 }
-header("Location:inscription.php");
 
 
  

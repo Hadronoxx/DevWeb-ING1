@@ -59,8 +59,16 @@ session_start();
              <input type="radio" name="genre" id="femme" value="Femme" class=<?php echo $_SESSION["genreClasse"]; ?>><br><br>
 
              <label>Date de Naissance</label>
-             <input type="date" name="date de naissance" id="datenaissance" > <?php echo $_SESSION["dateClasse"];?> <br><br>
-
+             <input type="date" name="datenaissance" id="datenaissance" class=<?php echo $_SESSION["dateClasse"];?>> <br><br>
+             <script>
+              document.getElementById("datenaissance").value=<?php 
+              if($_SESSION["dateClasse"]!="erreur"){
+                echo $_SESSION["dateClasse"];?>
+              <?php  
+              }else{
+                echo "undefined";}?>;
+              
+             </script>
              <label>Métier</label>
              <select name="selection" id="selection" class=<?php echo $_SESSION["selectionClasse"]; ?>>
               <option value="prof">Professeur</option>
